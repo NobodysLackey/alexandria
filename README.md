@@ -15,6 +15,8 @@
 
 Named after the ancient [Library of Alexandria](https://en.wikipedia.org/wiki/Library_of_Alexandria), ***Alexandria*** is a centralized API for students. It delivers stable, structured, and curated data for projects, labs, and lessons — from Stoic quotes to movie searches — all from one reliable source. Like the ancient library, it is meant to be a single repository of all human knowledge.
 
+Deployed to [https://alexandria-go.fly.dev](https://alexandria-go.fly.dev).
+
 ***
 
 
