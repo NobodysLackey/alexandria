@@ -1,15 +1,17 @@
-const mongoose = require('mongoose')
-require('dotenv').config()
+import mongoose from 'mongoose'
+import dotenv from 'dotenv'
+
+dotenv.config()
 
 const connect = async () => {
   try {
     await mongoose.connect(process.env.MONGODB_URI)
-    console.log('📚 Successfully connected to Alexandria MongoDB database . . .')
+    console.log('🏛️  Successfully connected to Alexandria MongoDB database . . .')
   } catch (error) {
     console.error('🔥 Connection Error!', error.message)
   }
 }
 
-connect()
+await connect()
 
-module.exports = mongoose.connection
+export const db = mongoose.connection
