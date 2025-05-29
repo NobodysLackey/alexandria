@@ -43,6 +43,7 @@ Deployed to [https://alexandria-go.fly.dev](https://alexandria-go.fly.dev).
 ### ***Credits***
 
 - [x] [Dogs API](https://dog.ceo/dog-api/documentation/)
+- [x] [Stoicism Quotes API](https://github.com/tlcheah2/stoic-quote-lambda-public-api)
 
 ***
 
