@@ -20,7 +20,7 @@ const getBreeds = async (req, res) => {
 const getImageByBreedName = async (req, res) => {
   try {
     const response = await axios.get(
-      `https://dog.ceo/api/breed/${req.params.breed}/images/random`
+      `https://dog.ceo/api/breed/${req.params.breed.toLowerCase()}/images/random`
     )
     res.send({
       status: 200,
