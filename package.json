@@ -1,0 +1,27 @@
+{
+  "name": "alexandria",
+  "version": "1.0.0",
+  "description": "Alexandria is a centralized API for students. It delivers stable, structured, and curated data for projects, labs, and lessons — from Stoic quotes to movie searches — all from one reliable source.",
+  "author": "Michael Lackey",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --watch server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NobodysLackey/alexandria.git"
+  },
+  "license": "UNLICENSED",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/NobodysLackey/alexandria/issues"
+  },
+  "homepage": "https://github.com/NobodysLackey/alexandria#readme",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.15.1",
+    "morgan": "^1.10.0"
+  }
+}
