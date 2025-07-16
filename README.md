@@ -30,9 +30,95 @@ Deployed to [https://alexandria-go.fly.dev](https://alexandria-go.fly.dev).
 ***
 
 
+### ***Endpoints***
+
+Precede all endpoints with `/api`...
+
+<hr>
+
+<details>
+<summary>🐕 Dogs</summary>
+
+<br>
+
+<p>Utilizes the <a href="https://dog.ceo/dog-api/documentation/">Dog API</a> to extrapolate dog breeds and images of random dogs based on a breed param.</p>
+
+### /dogs
+
+```json
+{
+  "status": 200,
+  "message": "Successfully retrieved dog breed list!",
+  "breeds": [
+    "affenpinscher",
+    "african",
+    "airedale",
+    // and so on...
+  ]
+}
+```
+
+### /dogs/:breed
+
+```json
+{
+  "status": 200,
+  "message": "Successfully retrieved random dog picture!",
+  "picture": "https://images.dog.ceo/breeds/pug/bobmarley.jpg"
+}
+```
+
+</details>
+
+<hr>
+
+<details>
+<summary>💬 Stoic Quotes</summary>
+
+<br>
+
+<p>Utilizes the <a href="https://github.com/tlcheah2/stoic-quote-lambda-public-api">Stoic Quote API</a> to retrieve a random quote and author.  Circumvents improperly set headers by original API to ensure clean responses.  Cleans up quotes and author data for typos and errors before sending.</p>
+
+### /quotes
+
+```json
+{
+  "status": 200,
+  "message": "Successfully retrieved a random quote!",
+  "quote": "Associate with people who are likely to improve you. Welcome those who you are capable of improving. The process is a mutual one: men learn as they teach.",
+  "author": "Seneca"
+}
+```
+
+</details>
+
+<hr>
+
+<details>
+<summary>🦆 Random Duck</summary>
+
+<br>
+
+<p>Utilizes the <a href="https://random-d.uk/api">Random Duck API</a> to retrieve a random image of a duck. Yes, you read that correctly.</p>
+
+### /ducks
+
+```json
+{
+  "status": 200,
+  "message": "Successfully retrieved a random duck!",
+  "duck": "https://random-d.uk/api/108.jpg"
+}
+```
+
+</details>
+
+<hr>
+
+
 ### ***Future Updates***
 
-- [ ] Deployment
+- [x] ~~Deployment~~
 - [ ] Front End for user sign up
 - [ ] API Keys
 - [ ] Publishing
@@ -44,6 +130,8 @@ Deployed to [https://alexandria-go.fly.dev](https://alexandria-go.fly.dev).
 
 - [x] [Dogs API](https://dog.ceo/dog-api/documentation/)
 - [x] [Stoicism Quotes API](https://github.com/tlcheah2/stoic-quote-lambda-public-api)
+- [x] [Random Duck API](https://random-d.uk/api)
+- [x] [Disney Character API](https://disneyapi.dev/docs/)
 
 ***
 

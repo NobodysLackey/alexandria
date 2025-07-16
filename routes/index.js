@@ -1,4 +1,5 @@
-import { DogRouter } from './DogRouter.js'
-import { QuoteRouter } from './QuoteRouter.js'
+import { DogRouter } from "./DogRouter.js"
+import { QuoteRouter } from "./QuoteRouter.js"
+import { DuckRouter } from "./DuckRouter.js"
 
-export { DogRouter, QuoteRouter }
+export { DogRouter, QuoteRouter, DuckRouter }
