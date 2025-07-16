@@ -2,7 +2,7 @@ import express from 'express'
 import logger from 'morgan'
 import cors from 'cors'
 
-import { DogRouter, QuoteRouter, DuckRouter } from './routes/index.js'
+import { DogRouter, QuoteRouter, DuckRouter, DisneyRouter } from './routes/index.js'
 
 const PORT = process.env.PORT || 3000
 
@@ -20,6 +20,7 @@ const apiRouter = express.Router()
 apiRouter.use('/dogs', DogRouter)
 apiRouter.use('/quotes', QuoteRouter)
 apiRouter.use('/ducks', DuckRouter)
+apiRouter.use('/disney', DisneyRouter)
 
 app.use('/api', apiRouter)
 

@@ -32,7 +32,16 @@ Deployed to [https://alexandria-go.fly.dev](https://alexandria-go.fly.dev).
 
 ### ***Endpoints***
 
-Precede all endpoints with `/api`...
+All endpoints return a JSON response with:
+1) A status code
+2) A message
+3) Pertinent 3rd Party API data
+
+Precede all endpoints with `/api`. Example:
+
+```txt
+GET https://alexandria-go.fly.dev/api/quotes
+```
 
 <hr>
 
@@ -43,7 +52,7 @@ Precede all endpoints with `/api`...
 
 <p>Utilizes the <a href="https://dog.ceo/dog-api/documentation/">Dog API</a> to extrapolate dog breeds and images of random dogs based on a breed param.</p>
 
-### /dogs
+### GET /dogs
 
 ```json
 {
@@ -58,7 +67,7 @@ Precede all endpoints with `/api`...
 }
 ```
 
-### /dogs/:breed
+### GET /dogs/:breed
 
 ```json
 {
@@ -79,7 +88,7 @@ Precede all endpoints with `/api`...
 
 <p>Utilizes the <a href="https://github.com/tlcheah2/stoic-quote-lambda-public-api">Stoic Quote API</a> to retrieve a random quote and author.  Circumvents improperly set headers by original API to ensure clean responses.  Cleans up quotes and author data for typos and errors before sending.</p>
 
-### /quotes
+### GET /quotes
 
 ```json
 {
@@ -101,13 +110,69 @@ Precede all endpoints with `/api`...
 
 <p>Utilizes the <a href="https://random-d.uk/api">Random Duck API</a> to retrieve a random image of a duck. Yes, you read that correctly.</p>
 
-### /ducks
+### GET /ducks
 
 ```json
 {
   "status": 200,
   "message": "Successfully retrieved a random duck!",
   "duck": "https://random-d.uk/api/108.jpg"
+}
+```
+
+</details>
+
+<hr>
+
+<details>
+<summary>🐭 Disney Characters</summary>
+
+<br>
+
+<p>Utilizes the <a href="https://disneyapi.dev/docs/">Disney Character API</a> to retrieve an array of Disney Characters and a single character by route parameter.</p>
+
+### GET /disney
+
+```json
+{
+	"status": 200,
+	"message": "Successfully retrieved Disney characters!",
+	"characters": [
+    // an array of 50 Disney characters
+	],
+	"next": "http://api.disneyapi.dev/character?page=2&pageSize=50"
+}
+```
+
+### GET /disney/:name
+
+```json
+{
+	"status": 200,
+	"message": "Successfully retrieved a Disney character!",
+	"character": {
+    "_id": 450,
+    "films": [
+      "The Jungle Book",
+      "The Jungle Book 2"
+    ],
+    "tvShows": [
+      "TaleSpin"
+    ],
+    "videoGames": [
+      "TaleSpin (NES video game)",
+      "TaleSpin (Sega Genesis Video Game)",
+      "The Jungle Book (video game)"
+    ],
+    "parkAttractions": [
+      "It's a Small World",
+      "Parade of the Stars"
+    ],
+    "sourceUrl": "https://disney.fandom.com/wiki/Baloo",
+    "name": "Baloo",
+    "imageUrl": "https://static.wikia.nocookie.net/disney/images/3/31/Profile_-_Baloo.jpeg",
+    "url": "https://api.disneyapi.dev/characters/450"
+  }
 }
 ```
 
