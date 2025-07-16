@@ -148,9 +148,9 @@ GET https://alexandria-go.fly.dev/api/quotes
 
 ```json
 {
-	"status": 200,
-	"message": "Successfully retrieved a Disney character!",
-	"character": {
+  "status": 200,
+  "message": "Successfully retrieved a Disney character!",
+  "character": {
     "_id": 450,
     "films": [
       "The Jungle Book",
