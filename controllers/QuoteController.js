@@ -2,30 +2,11 @@ import axios from "axios"
 
 const getQuote = async (req, res) => {
   try {
-    const response = await axios.get("https://stoic.tekloon.net/stoic-quote")
+    const response = await axios.get("https://stoic-quotes.com/api/quote")
 
-    let quote = response.data.data.quote?.endsWith("@")
-      ? response.data.data.quote.slice(0, -1)
-      : response.data.data.quote
+    let quote = response.data.quote
 
-    let author = response.data.data.author
-
-    switch (author) {
-      case "TheStoicEmperor":
-        author = "Marcus Aurelius"
-        break
-      case "TheAncientSage":
-        author = "Socrates"
-        break
-      case "Life Math Money":
-        author = "Harsh Strongman"
-        break
-      case "":
-        author = "Unknown"
-        break
-      default:
-        author = response.data.data.author
-    }
+    let author = response.data.author
 
     res.status(200).send({
       status: 200,

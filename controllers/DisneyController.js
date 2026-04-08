@@ -13,6 +13,8 @@ const getAllCharacters = async (req, res) => {
       next: response.data.info.nextPage
     })
   } catch (error) {
+    console.error(error)
+
     res.status(400).send({ status: 400, msg: "Error getting Disney characters!" })
   }
 }
